@@ -1,0 +1,254 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --black: rgba(28, 28, 28, 1);
+  --bloor-2-secondary: 0px 1px 8.300000190734863px 0px rgba(0, 0, 0, 0.1);
+  --color-kitdanger-secondary: rgba(211, 47, 47, 1);
+  --dark-theme-color-schemeprimary: rgba(245, 121, 59, 1);
+  --dark-theme-color-schemeprimary-hover: rgba(255, 147, 86, 1);
+  --desktop-display-sm-medium-font-family: "Inter", Helvetica;
+  --desktop-display-sm-medium-font-size: 30px;
+  --desktop-display-sm-medium-font-style: normal;
+  --desktop-display-sm-medium-font-weight: 500;
+  --desktop-display-sm-medium-letter-spacing: 0px;
+  --desktop-display-sm-medium-line-height: 38px;
+  --desktop-text-md-regular-font-family: "Inter", Helvetica;
+  --desktop-text-md-regular-font-size: 16px;
+  --desktop-text-md-regular-font-style: normal;
+  --desktop-text-md-regular-font-weight: 400;
+  --desktop-text-md-regular-letter-spacing: 0px;
+  --desktop-text-md-regular-line-height: 24px;
+  --desktop-text-small-medium-font-family: "Inter", Helvetica;
+  --desktop-text-small-medium-font-size: 14px;
+  --desktop-text-small-medium-font-style: normal;
+  --desktop-text-small-medium-font-weight: 500;
+  --desktop-text-small-medium-letter-spacing: 0px;
+  --desktop-text-small-medium-line-height: 20px;
+  --desktop-text-small-regular-font-family: "Inter", Helvetica;
+  --desktop-text-small-regular-font-size: 14px;
+  --desktop-text-small-regular-font-style: normal;
+  --desktop-text-small-regular-font-weight: 400;
+  --desktop-text-small-regular-letter-spacing: 0px;
+  --desktop-text-small-regular-line-height: 20px;
+  --desktop-text-xs-medium-font-family: "Inter", Helvetica;
+  --desktop-text-xs-medium-font-size: 12px;
+  --desktop-text-xs-medium-font-style: normal;
+  --desktop-text-xs-medium-font-weight: 500;
+  --desktop-text-xs-medium-letter-spacing: 0px;
+  --desktop-text-xs-medium-line-height: 18px;
+  --desktop-text-xs-regular-font-family: "Inter", Helvetica;
+  --desktop-text-xs-regular-font-size: 12px;
+  --desktop-text-xs-regular-font-style: normal;
+  --desktop-text-xs-regular-font-weight: 400;
+  --desktop-text-xs-regular-letter-spacing: 0px;
+  --desktop-text-xs-regular-line-height: 18px;
+  --gray-900: rgba(16, 24, 40, 1);
+  --grays-100: rgba(245, 245, 245, 1);
+  --grays-200: rgba(238, 238, 238, 1);
+  --grays-300: rgba(224, 224, 224, 1);
+  --grays-500: rgba(158, 158, 158, 1);
+  --grays-600: rgba(117, 117, 117, 1);
+  --light-themebackground: rgba(245, 245, 245, 1);
+  --light-themebackground-secondary: rgba(255, 255, 255, 1);
+  --light-themeborder: rgba(221, 221, 221, 1);
+  --light-themeprimary: rgba(245, 121, 59, 1);
+  --light-themetext-primary: rgba(26, 26, 26, 1);
+  --light-themetext-secondary: rgba(90, 90, 90, 1);
+}
+
+:root {
+  --animate-spin: spin 1s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
+
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}

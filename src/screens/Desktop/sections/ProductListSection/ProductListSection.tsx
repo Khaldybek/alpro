@@ -7,6 +7,7 @@ import {
   CheckIcon,
 } from "lucide-react";
 import React, { useState } from "react";
+import styles from "./ProductListSection.module.css";
 import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 import { Checkbox } from "../../../../components/ui/checkbox";
@@ -348,80 +349,49 @@ export const ProductListSection = (): JSX.Element => {
           ))}
         </div>
 
-        <div className="w-full flex justify-center mt-6 pb-6">
-          <Pagination className="w-full">
-            <PaginationContent className="flex items-center justify-between w-full max-w-4xl mx-auto px-4">
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-600">
-                  Показано 1-5 из 50 товаров
-                </span>
+        <div className={styles.paginationContainer}>
+          <div className={styles.paginationWrapper}>
+            <span className={styles.itemsInfo}>
+              Показано 1-5 из 50 товаров
+            </span>
+            
+            <button className={styles.navButton} disabled>
+              Предыдущая
+            </button>
+            
+            <div className={styles.pageNumbers}>
+              <div className={`${styles.pageNumber} ${styles.active}`}>
+                1
               </div>
-              
-              <div className="flex items-center gap-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="h-8 px-3 text-sm border-gray-300 hover:bg-gray-50"
-                  disabled
-                >
-                  Предыдущая
-                </Button>
-                
-              <PaginationItem>
-                  <div className="w-8 h-8 bg-[#F5793B] rounded-lg flex items-center justify-center shadow-sm">
-                    <span className="text-sm font-medium text-white">
-                    1
-                    </span>
-                  </div>
-              </PaginationItem>
-                
-              <PaginationItem>
-                  <PaginationLink className="w-8 h-8 flex items-center justify-center text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                  2
-                  </PaginationLink>
-              </PaginationItem>
-                
-                <PaginationItem>
-                  <PaginationLink className="w-8 h-8 flex items-center justify-center text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                    3
-                  </PaginationLink>
-                </PaginationItem>
-                
-              <PaginationItem>
-                  <PaginationEllipsis className="w-8 h-8 flex items-center justify-center text-sm text-gray-400" />
-              </PaginationItem>
-                
-              <PaginationItem>
-                  <PaginationLink className="w-8 h-8 flex items-center justify-center text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                  10
-                  </PaginationLink>
-              </PaginationItem>
-                
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="h-8 px-3 text-sm border-gray-300 hover:bg-gray-50"
-                >
-                  Следующая
-                </Button>
+              <div className={styles.pageNumber}>
+                2
               </div>
-            </PaginationContent>
-          </Pagination>
-        </div>
-
-        <div className="w-full flex justify-center pb-6">
-          <div className="flex items-center gap-3 px-4 py-3 bg-white rounded-lg border border-gray-200 shadow-sm">
-            <span className="text-sm text-gray-600">Перейти на страницу:</span>
-            <Input
-              defaultValue="3"
-              className="w-16 h-8 rounded-md border border-gray-300 text-center text-sm focus:ring-2 focus:ring-[#F5793B] focus:border-[#F5793B] transition-all"
-            />
-            <Button
-              size="sm"
-              className="h-8 px-3 bg-[#F5793B] hover:bg-[#e6692f] text-white rounded-md transition-colors"
-            >
-              Перейти
-            </Button>
+              <div className={styles.pageNumber}>
+                3
+              </div>
+              <div className={styles.ellipsis}>
+                ...
+              </div>
+              <div className={styles.pageNumber}>
+                10
+              </div>
+            </div>
+            
+            <button className={styles.navButton}>
+              Следующая
+            </button>
+            
+            <div className={styles.jumpToPage}>
+              <span className={styles.jumpLabel}>Перейти на страницу:</span>
+              <input 
+                type="number" 
+                defaultValue="3" 
+                className={styles.jumpInput}
+              />
+              <button className={styles.jumpButton}>
+                Перейти
+              </button>
+            </div>
           </div>
         </div>
       </CardContent>

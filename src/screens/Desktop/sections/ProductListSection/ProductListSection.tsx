@@ -349,57 +349,79 @@ export const ProductListSection = (): JSX.Element => {
         </div>
 
         <div className="w-full flex justify-center mt-6 pb-6">
-          <Pagination>
-            <PaginationContent className="flex items-center gap-3">
+          <Pagination className="w-full">
+            <PaginationContent className="flex items-center justify-between w-full max-w-4xl mx-auto px-4">
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-gray-600">
+                  Показано 1-5 из 50 товаров
+                </span>
+              </div>
+              
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="h-8 px-3 text-sm border-gray-300 hover:bg-gray-50"
+                  disabled
+                >
+                  Предыдущая
+                </Button>
+                
               <PaginationItem>
-                <div className="w-8 h-8 bg-[#F5793B] rounded-[5px] flex items-center justify-center">
-                  <span className="font-desktop-text-small-regular font-[number:var(--desktop-text-small-regular-font-weight)] text-light-themetext-primary text-[length:var(--desktop-text-small-regular-font-size)] text-center tracking-[var(--desktop-text-small-regular-letter-spacing)] leading-[var(--desktop-text-small-regular-line-height)] [font-style:var(--desktop-text-small-regular-font-style)]">
+                  <div className="w-8 h-8 bg-[#F5793B] rounded-lg flex items-center justify-center shadow-sm">
+                    <span className="text-sm font-medium text-white">
                     1
-                  </span>
-                </div>
+                    </span>
+                  </div>
               </PaginationItem>
+                
               <PaginationItem>
-                <PaginationLink className="w-8 h-8 flex items-center justify-center font-desktop-text-small-regular font-[number:var(--desktop-text-small-regular-font-weight)] text-light-themetext-primary text-[length:var(--desktop-text-small-regular-font-size)] text-center tracking-[var(--desktop-text-small-regular-letter-spacing)] leading-[var(--desktop-text-small-regular-line-height)] [font-style:var(--desktop-text-small-regular-font-style)]">
+                  <PaginationLink className="w-8 h-8 flex items-center justify-center text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
                   2
-                </PaginationLink>
+                  </PaginationLink>
               </PaginationItem>
+                
+                <PaginationItem>
+                  <PaginationLink className="w-8 h-8 flex items-center justify-center text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                    3
+                  </PaginationLink>
+                </PaginationItem>
+                
               <PaginationItem>
-                <PaginationEllipsis className="w-8 h-8 flex items-center justify-center font-desktop-text-small-regular font-[number:var(--desktop-text-small-regular-font-weight)] text-light-themetext-primary text-[length:var(--desktop-text-small-regular-font-size)] text-center tracking-[var(--desktop-text-small-regular-letter-spacing)] leading-[var(--desktop-text-small-regular-line-height)] [font-style:var(--desktop-text-small-regular-font-style)]" />
+                  <PaginationEllipsis className="w-8 h-8 flex items-center justify-center text-sm text-gray-400" />
               </PaginationItem>
+                
               <PaginationItem>
-                <PaginationLink className="w-8 h-8 flex items-center justify-center font-desktop-text-small-regular font-[number:var(--desktop-text-small-regular-font-weight)] text-light-themetext-primary text-[length:var(--desktop-text-small-regular-font-size)] text-center tracking-[var(--desktop-text-small-regular-letter-spacing)] leading-[var(--desktop-text-small-regular-line-height)] [font-style:var(--desktop-text-small-regular-font-style)]">
+                  <PaginationLink className="w-8 h-8 flex items-center justify-center text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
                   10
-                </PaginationLink>
+                  </PaginationLink>
               </PaginationItem>
-              <PaginationItem>
-                <div className="w-8 h-8 flex items-center justify-center">
-                  <img
-                    className="w-5 h-5"
-                    alt="Next page"
-                    src="/lsicon-left-outline.svg"
-                  />
-                </div>
-              </PaginationItem>
+                
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="h-8 px-3 text-sm border-gray-300 hover:bg-gray-50"
+                >
+                  Следующая
+                </Button>
+              </div>
             </PaginationContent>
           </Pagination>
         </div>
 
-        <div className="w-full flex justify-center pb-4">
-          <div className="w-[184px] h-[52px] flex flex-col items-start gap-2.5 px-3 py-3.5 bg-white rounded-[10px] border border-[#dddddd]">
-            <div className="relative w-full h-6 flex items-center gap-2">
-              <span className="font-desktop-text-small-regular font-[number:var(--desktop-text-small-regular-font-weight)] text-light-themetext-primary text-[length:var(--desktop-text-small-regular-font-size)] text-center tracking-[var(--desktop-text-small-regular-letter-spacing)] leading-[var(--desktop-text-small-regular-line-height)] [font-style:var(--desktop-text-small-regular-font-style)]">
-                Перейти на
-              </span>
-              <Input
-                defaultValue="3"
-                className="w-9 h-6 rounded-[5px] border border-[#dddddd] text-center font-desktop-text-small-regular font-[number:var(--desktop-text-small-regular-font-weight)] text-light-themetext-primary text-[length:var(--desktop-text-small-regular-font-size)] tracking-[var(--desktop-text-small-regular-letter-spacing)] leading-[var(--desktop-text-small-regular-line-height)] [font-style:var(--desktop-text-small-regular-font-style)]"
-              />
-              <img
-                className="w-5 h-5"
-                alt="Lsicon left outline"
-                src="/lsicon-left-outline.svg"
-              />
-            </div>
+        <div className="w-full flex justify-center pb-6">
+          <div className="flex items-center gap-3 px-4 py-3 bg-white rounded-lg border border-gray-200 shadow-sm">
+            <span className="text-sm text-gray-600">Перейти на страницу:</span>
+            <Input
+              defaultValue="3"
+              className="w-16 h-8 rounded-md border border-gray-300 text-center text-sm focus:ring-2 focus:ring-[#F5793B] focus:border-[#F5793B] transition-all"
+            />
+            <Button
+              size="sm"
+              className="h-8 px-3 bg-[#F5793B] hover:bg-[#e6692f] text-white rounded-md transition-colors"
+            >
+              Перейти
+            </Button>
           </div>
         </div>
       </CardContent>

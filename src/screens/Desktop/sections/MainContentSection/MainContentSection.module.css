@@ -1,0 +1,96 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 24px;
+  background-color: var(--light-themebackground-secondary);
+  border-bottom: 1px solid #dddddd;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  width: 115px;
+  height: 36px;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.organizationSelector {
+  width: 252px;
+  height: 36px;
+  background-color: var(--light-themebackground-secondary);
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  position: relative;
+}
+
+.organizationContent {
+  display: flex;
+  width: 220px;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 6px;
+  left: 24px;
+}
+
+.organizationInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.organizationIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.organizationName {
+  font-family: var(--desktop-text-small-medium-font-family);
+  font-weight: var(--desktop-text-small-medium-font-weight);
+  color: var(--light-themetext-primary);
+  font-size: var(--desktop-text-small-medium-font-size);
+  letter-spacing: var(--desktop-text-small-medium-letter-spacing);
+  line-height: var(--desktop-text-small-medium-line-height);
+  font-style: var(--desktop-text-small-medium-font-style);
+  white-space: nowrap;
+}
+
+.dropdownArrow {
+  width: 20px;
+  height: 20px;
+}
+
+.userActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.languageText {
+  font-family: var(--desktop-text-md-regular-font-family);
+  font-weight: var(--desktop-text-md-regular-font-weight);
+  color: var(--light-themetext-primary);
+  font-size: var(--desktop-text-md-regular-font-size);
+  letter-spacing: var(--desktop-text-md-regular-letter-spacing);
+  line-height: var(--desktop-text-md-regular-line-height);
+  font-style: var(--desktop-text-md-regular-font-style);
+  white-space: nowrap;
+}
+
+.actionIcon {
+  width: 24px;
+  height: 24px;
+}

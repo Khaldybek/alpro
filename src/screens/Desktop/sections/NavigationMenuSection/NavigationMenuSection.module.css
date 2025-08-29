@@ -1,0 +1,87 @@
+.sidebar {
+  width: 240px;
+  height: 965px;
+  background-color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 169px;
+  align-items: flex-start;
+  gap: 20px;
+  padding-top: 20px;
+  padding-left: 24px;
+}
+
+.nav {
+  width: 100%;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-family: var(--desktop-text-small-regular-font-family);
+  font-weight: var(--desktop-text-small-regular-font-weight);
+  color: var(--light-themetext-primary);
+  font-size: var(--desktop-text-small-regular-font-size);
+  letter-spacing: var(--desktop-text-small-regular-letter-spacing);
+  line-height: var(--desktop-text-small-regular-line-height);
+  font-style: var(--desktop-text-small-regular-font-style);
+  margin-bottom: 32px;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding-left: 12px;
+}
+
+.menuListLearning {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  padding-left: 12px;
+}
+
+.menuItem {
+  width: 100%;
+}
+
+.menuLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 24px;
+  width: 100%;
+  text-decoration: none;
+}
+
+.menuIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.menuText {
+  font-family: var(--desktop-text-small-regular-font-family);
+  font-weight: var(--desktop-text-small-regular-font-weight);
+  font-size: var(--desktop-text-small-regular-font-size);
+  letter-spacing: var(--desktop-text-small-regular-letter-spacing);
+  line-height: var(--desktop-text-small-regular-line-height);
+  font-style: var(--desktop-text-small-regular-font-style);
+  white-space: nowrap;
+}
+
+.menuTextActive {
+  color: var(--dark-theme-color-schemeprimary);
+}
+
+.menuTextInactive {
+  color: var(--light-themetext-primary);
+}

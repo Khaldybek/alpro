@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Desktop.module.css";
 import { HeaderSection } from "./sections/HeaderSection/HeaderSection";
 import { MainContentSection } from "./sections/MainContentSection/MainContentSection";
 import { NavigationMenuSection } from "./sections/NavigationMenuSection/NavigationMenuSection";
@@ -6,12 +7,12 @@ import { ProductListSection } from "./sections/ProductListSection/ProductListSec
 
 export const Desktop = (): JSX.Element => {
   return (
-    <div className="bg-neutral-100 min-h-screen w-full flex justify-center">
-      <div className="bg-light-themebackground w-full max-w-[1440px] min-h-screen flex flex-col">
+    <div className={styles.container}>
+      <div className={styles.wrapper}>
         <MainContentSection />
-        <div className="flex flex-1">
+        <div className={styles.mainLayout}>
           <NavigationMenuSection />
-          <div className="flex flex-col flex-1">
+          <div className={styles.contentArea}>
             <HeaderSection />
             <ProductListSection />
           </div>
